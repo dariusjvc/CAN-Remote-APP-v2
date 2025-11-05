@@ -1,0 +1,7 @@
+{
+  "name": "CAN-Remote-APP-Updated",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
