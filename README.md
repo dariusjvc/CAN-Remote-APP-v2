@@ -1,8 +1,3 @@
-# =========================
-# CAN-Remote-APP-v2 — Windows quick commands
-# Copy/paste this whole block into README.md
-# =========================
-
 # --- Prereqs (one-time per session) ---
 # Node >= 20.19 (or 22.12), Android Studio installed
 $env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
