@@ -1,33 +1,75 @@
-# --- Prereqs (one-time per session) ---
-# Node >= 20.19 (or 22.12), Android Studio installed
-$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
-$env:Path = "$env:JAVA_HOME\bin;$env:Path"
-$env:ANDROID_SDK_ROOT = "$env:LOCALAPPDATA\Android\Sdk"
+# Android Build Workflow – Capacitor + Ionic/Angular
 
-# --- First-time Android setup (inside project root) ---
-npm i
+This guide walks you through the key steps to build an Android app using **Capacitor + Ionic/Angular**.
+
+---
+
+##  Prerequisites (per terminal session)
+
+- **Node.js** `>= 20.19` (or `22.12`)
+- **Android Studio** + Android SDK installed
+- Set environment variables (example for PowerShell):
+
+```bash
+$env:JAVA_HOME        = "C:\Program Files\Android\Android Studio\jbr"
+$env:Path             = "$env:JAVA_HOME\bin;$env:Path"
+$env:ANDROID_SDK_ROOT = "$env:LOCALAPPDATA\Android\Sdk"
+```
+
+---
+
+## 1️⃣ Initial Android Setup (run once in project root)
+
+```bash
+npm install
 npm run build
 npx cap add android
 npx cap sync android
+```
 
-# --- After WEB code changes (src/*, HTML/TS/SCSS) ---
+---
+
+## 2️⃣ After Modifying Web Code (HTML / TS / SCSS / Assets)
+
+```bash
 npm run build
 npx cap copy android
-npx cap sync android
+npx cap sync android   
+```
 
-# --- After PLUGIN / package.json changes ---
-npm i
+---
+
+## 3️⃣ After Dependency or Plugin Changes (package.json / Capacitor plugins)
+
+```bash
+npm install
 npm run build
 npx cap sync android
+```
 
+---
 
-# --- If Gradle/Capacitor cache acts weird ---
+## 4️⃣ If Capacitor or Gradle Cache Misbehaves
+
+```bash
 npx cap sync android
 cd android
-.\gradlew clean
+./gradlew clean
+```
 
+---
 
-# --- Build Debug APK (path shown below) ---
+## 5️⃣ Build Debug APK
+
+```bash
 cd android
-.\gradlew assembleDebug
-# Output: android\app\build\outputs\apk\debug\app-debug.apk
+./gradlew assembleDebug
+```
+
+**APK output location**:  
+```
+android/app/build/outputs/apk/debug/app-debug.apk
+```
+
+---
+
