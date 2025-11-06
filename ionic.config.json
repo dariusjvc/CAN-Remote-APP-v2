@@ -1,7 +1,9 @@
 {
   "name": "CAN-Remote-APP-Updated",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
+
   },
-  "type": "angular-standalone"
+  "type": "angular"
 }
