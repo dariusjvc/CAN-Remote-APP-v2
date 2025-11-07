@@ -23,4 +23,8 @@ export const routes: Routes = [
     path: 'fingerprint',
     loadComponent: () => import('./fingerprint/fingerprint.page').then( m => m.FingerprintPage)
   },
+  {
+    path: 'about',
+    loadComponent: () => import('./about/about.page').then( m => m.AboutPage)
+  },
 ];
