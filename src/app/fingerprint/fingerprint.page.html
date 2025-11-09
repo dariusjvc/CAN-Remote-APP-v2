@@ -1,13 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>fingerprint</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-text color="dark">
+        <p>Biometric Authentication</p>
+      </ion-text>
+    </ion-row>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">fingerprint</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <!-- separadores simples -->
+    <div style="height: 24px;"></div>
+
+    <ion-item lines="none" class="ion-justify-content-center" style="text-align:center;">
+      <img
+        src="../../assets/img/locked.svg"
+        class="lock-img"
+        tappable
+        (click)="unLock()"
+        alt="Locked"
+        style="width:120px;height:120px;cursor:pointer;"
+      />
+    </ion-item>
+
+    <ion-row class="login-row ion-justify-content-center">
+      <ion-text class="ion-text-center" color="dark">
+        <h5>Click on <b>LOCK</b> image to start:</h5>
+      </ion-text>
+    </ion-row>
+  </ion-grid>
 </ion-content>
