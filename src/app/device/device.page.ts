@@ -28,12 +28,13 @@ export class DevicePage {
 
   async conectar() {
     const ip = this.ip?.trim();
-    const portNum = typeof this.port === 'string' ? parseInt(this.port, 10) : this.port;
+    const portNum = 0; // Only for testing
+    // const portNum = typeof this.port === 'string' ? parseInt(this.port, 10) : this.port;
 
-    if (!ip || portNum == null || Number.isNaN(portNum)) {
-      alert('Please, enter a valid IP and port');
-      return;
-    }
+    // if (!ip || portNum == null || Number.isNaN(portNum)) {
+    //   alert('Please, enter a valid IP and port');
+    //   return;
+    // }
 
     try {
       const conectarResult = await this.tcp.conectar(ip, portNum);
