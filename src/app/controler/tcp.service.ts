@@ -29,50 +29,52 @@ export class TcpService {
   }
 
   async conectar(ip: string, port: number): Promise<void> {
-    this.socket = new (window as any).Socket();
 
-    this.eventos().subscribe(
-      (data: string | ArrayBuffer | Uint8Array) =>
-        this.rutinas.processData(String(data)),
-      (error: any) => this.rutinas.ShowToast('Error: ' + String(error))
-    );
+    this.router.navigateByUrl('/fingerprint');
+    // this.socket = new (window as any).Socket();
 
-    const socketState = JSON.parse(JSON.stringify(this.socket))._state;
-    if (socketState !== 0) {
-      const loading1 = this.loadingController.create({ message: 'Disconnecting' });
-      loading1.then(res => res.present());
-      this.socket.close(
-        () => {
-          this.rutinas.ShowToast('socket.close.success');
-          loading1.then(res => res.dismiss());
-        },
-        (error: any) => {
-          this.rutinas.ShowAlert('socket.close.failed ' + String(error));
-          loading1.then(res => res.dismiss());
-        }
-      );
-    }
+    // this.eventos().subscribe(
+    //   (data: string | ArrayBuffer | Uint8Array) =>
+    //     this.rutinas.processData(String(data)),
+    //   (error: any) => this.rutinas.ShowToast('Error: ' + String(error))
+    // );
 
-    const loading = this.loadingController.create({ message: 'Connecting' });
-    loading.then(res => res.present());
+    // const socketState = JSON.parse(JSON.stringify(this.socket))._state;
+    // if (socketState !== 0) {
+    //   const loading1 = this.loadingController.create({ message: 'Disconnecting' });
+    //   loading1.then(res => res.present());
+    //   this.socket.close(
+    //     () => {
+    //       this.rutinas.ShowToast('socket.close.success');
+    //       loading1.then(res => res.dismiss());
+    //     },
+    //     (error: any) => {
+    //       this.rutinas.ShowAlert('socket.close.failed ' + String(error));
+    //       loading1.then(res => res.dismiss());
+    //     }
+    //   );
+    // }
 
-    await this.socket.open(
-      ip,
-      port,
-      (test: any) => {
-        this.connected = true;
-        this.rutinas.ShowToast('socket.open.success');
-        loading.then(res => {
-          res.dismiss();
-          this.router.navigateByUrl('/fingerprint');
-        });
-      },
-      (error: any) => {
-        this.connected = false;
-        this.rutinas.ShowAlert('socket.open.failed ' + String(error));
-        loading.then(res => res.dismiss());
-      }
-    );
+    // const loading = this.loadingController.create({ message: 'Connecting' });
+    // loading.then(res => res.present());
+
+    // await this.socket.open(
+    //   ip,
+    //   port,
+    //   (test: any) => {
+    //     this.connected = true;
+    //     this.rutinas.ShowToast('socket.open.success');
+    //     loading.then(res => {
+    //       res.dismiss();
+    //       this.router.navigateByUrl('/fingerprint');
+    //     });
+    //   },
+    //   (error: any) => {
+    //     this.connected = false;
+    //     this.rutinas.ShowAlert('socket.open.failed ' + String(error));
+    //     loading.then(res => res.dismiss());
+    //   }
+    // );
   }
 
   enviarMensaje(mensaje: string): void {
