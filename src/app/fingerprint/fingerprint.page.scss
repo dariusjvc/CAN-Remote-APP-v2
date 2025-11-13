@@ -1,0 +1,66 @@
+:host {
+  --brand: #ff5001;
+}
+
+.fingerprint {
+  --ion-background-color: #ffffff;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 32px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title h2 {
+  margin: 16px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--brand);
+  text-align: center;
+}
+
+.lock-wrapper {
+  margin-top: 48px;
+  width: 140px;
+  height: 140px;
+  border-radius: 32px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lock-img {
+  width: 96px;
+  height: 96px;
+}
+
+.subtitle {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+}
+
+.secondary {
+  margin-top: auto;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+}
+.secondary p {
+  text-decoration: underline;
+}
+
+
+:root {
+  --ion-color-primary: #ff5001;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #e04800;
+  --ion-color-primary-tint: #ff6a26;
+}

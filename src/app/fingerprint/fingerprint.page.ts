@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-// Ionic Standalone imports (solo lo que usas en la plantilla)
-import {
-  IonContent,
-  IonGrid,
-  IonRow,
-  IonItem,
-  IonText
-} from '@ionic/angular/standalone';
+import { IonContent, IonText } from '@ionic/angular/standalone';
 
 import { AlertsService } from '../services/alerts.service';
 import { StorageService } from '../services/storage.service';
@@ -18,7 +11,7 @@ import { StorageService } from '../services/storage.service';
   templateUrl: './fingerprint.page.html',
   styleUrls: ['./fingerprint.page.scss'],
   standalone: true,
-  imports: [IonContent, IonGrid, IonRow, IonItem, IonText],
+  imports: [IonContent, IonText],
 })
 export class FingerprintPage implements OnInit {
 
@@ -31,13 +24,30 @@ export class FingerprintPage implements OnInit {
   ngOnInit() {}
 
   async ionViewWillEnter() {
+
+  }
+
+  // Se llama cuando se pulsa el candado
+  async onLockClick() {
+    console.log('[Fingerprint] lock clicked');
     await this.unLock();
   }
 
   async unLock() {
-    const biometric = await this.storage.get<boolean>('biometric');
+    try {
+      const biometric = await this.storage.get<boolean>('biometric');
+      console.log('[Fingerprint] biometric flag:', biometric);
 
-    await this.alerts.fingerPrintAIO();
+      const res = await this.alerts.fingerPrintAIO();
+      console.log('[Fingerprint] fingerPrintAIO result:', res);
+
+      this.router.navigate(['/device']);
+
+    } catch (err) {
+      console.error('[Fingerprint] error in unLock:', err);
+
+      this.router.navigate(['/device']);
+    }
   }
 
   async removeData() {

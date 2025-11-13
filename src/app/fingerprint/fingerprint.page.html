@@ -1,29 +1,23 @@
-<ion-content class="ion-padding">
-  <ion-grid>
-    <ion-row class="ion-justify-content-center">
-      <ion-text color="dark">
-        <p>Biometric Authentication</p>
-      </ion-text>
-    </ion-row>
+<ion-content [fullscreen]="true" class="fingerprint">
+  <div class="container">
+    <ion-text class="title">
+      <h2>Biometric Authentication</h2>
+    </ion-text>
 
-    <!-- separadores simples -->
-    <div style="height: 24px;"></div>
-
-    <ion-item lines="none" class="ion-justify-content-center" style="text-align:center;">
+    <div class="lock-wrapper" (click)="onLockClick()">
       <img
-        src="../../assets/img/locked.svg"
-        class="lock-img"
-        tappable
-        (click)="unLock()"
+        src="assets/img/locked.svg"
         alt="Locked"
-        style="width:120px;height:120px;cursor:pointer;"
+        class="lock-img"
       />
-    </ion-item>
+    </div>
 
-    <ion-row class="login-row ion-justify-content-center">
-      <ion-text class="ion-text-center" color="dark">
-        <h5>Click on <b>LOCK</b> image to start:</h5>
-      </ion-text>
-    </ion-row>
-  </ion-grid>
+    <ion-text class="subtitle">
+      <p>Click on <b>LOCK</b> image to start</p>
+    </ion-text>
+
+    <ion-text class="secondary" (click)="removeData()">
+      <p>Remove biometric data</p>
+    </ion-text>
+  </div>
 </ion-content>
