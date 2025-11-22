@@ -25,14 +25,18 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
-//this scss is used to align the text and button in the advertising wellcome message
-.my-alert .alert-wrapper {      
-    .alert-button-group {
-      justify-content: center;
-    }    
-    //text-align: center;
-    //align-content: center;
-    //align-self: center;
-    text-align-last: center;
-    //align-items: center;
-  }
+/* Centrar texto del alert */
+ion-alert.login-alert .alert-head,
+ion-alert.login-alert .alert-message {
+  text-align: center;
+}
+
+/* Centrar grupo de botones */
+ion-alert.login-alert .alert-button-group {
+  justify-content: center;
+}
+
+/* Opcional: hacer el botón un poco más ancho */
+ion-alert.login-alert .alert-button {
+  min-width: 80px;
+}

@@ -1,47 +1,49 @@
 <ion-content>
+  <!-- ALERTA DE ENTRADA -->
+<ion-alert
+  [isOpen]="isAlertOpen"
+  header="Alert"
+  subHeader="This is a warning message"
+  message="The inappropriate use of this app is not allowed. If you are not an authorized user, please avoid using this app"
+  [buttons]="['OK']"
+  (didDismiss)="setAlert(false)"
+  cssClass="login-alert"
+></ion-alert>
+
+
   <form>
     <div>
       <p>Login</p>
     </div>
     <ion-item lines="full">
-      <ion-input type="text" placeholder="User" [(ngModel)]="user" name="user"></ion-input>
+      <ion-input
+        type="text"
+        placeholder="User"
+        [(ngModel)]="user"
+        name="user"
+      ></ion-input>
     </ion-item>
 
     <ion-item lines="full">
-      <ion-input type="password" placeholder="Password" [(ngModel)]="password" name="password"></ion-input>
+      <ion-input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="password"
+        name="password"
+      ></ion-input>
     </ion-item>
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="primary" expand="block" (click)="loginAccess()">Sign In</ion-button>
-        <!-- <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a> -->
+        <ion-button
+          type="button"
+          color="primary"
+          expand="block"
+          (click)="loginAccess()"
+        >
+          Sign In
+        </ion-button>
       </ion-col>
     </ion-row>
-    <!-- <ion-row>
-      <ion-col>
-        <ion-button type="submit" color="success" expand="block" [routerLink]="['/register']">Register</ion-button>
-      </ion-col>
-    </ion-row>     -->
   </form>
-
-
-<ion-grid>
-  <ion-row>
-    <ion-col>
-    </ion-col>
-
-    <ion-col>
-    </ion-col>
-
-    <ion-col>
-    </ion-col>
-
-    <ion-col>
-    <img src="../../assets/icon/TEC-icon.png">
-    </ion-col>
-
-  </ion-row>
-</ion-grid>
-
-
 </ion-content>

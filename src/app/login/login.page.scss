@@ -1,0 +1,47 @@
+ ion-content{
+
+     --ion-background-color:white;
+ }
+
+
+form, input, optgroup, select {
+    margin: 0;
+    font: inherit;
+    color: #FF5001;
+    text-align: -webkit-center;
+}
+
+.input-wrapper {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: inherit;
+    align-items: inherit;
+    align-self: stretch;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: #FF5001;
+    text-align: -webkit-center;
+}
+
+ion-input {
+    background-color: white;
+}
+
+img {
+    max-width: 246%;
+    border: 0;
+    margin-top: 311%;
+    margin-left: -245%;
+}
+
+.ion-color-primary {
+    --ion-color-base: #FF5001 !important;
+    --ion-color-base-rgb: var(--ion-color-primary-rgb, 56, 128, 255) !important;
+    --ion-color-contrast: var(--ion-color-primary-contrast, #fff) !important;
+    --ion-color-contrast-rgb: var(--ion-color-primary-contrast-rgb, 255, 255, 255) !important;
+    --ion-color-shade: var(--ion-color-primary-shade, #3171e0) !important;
+    --ion-color-tint: var(--ion-color-primary-tint, #4c8dff) !important;
+}
+
+
