@@ -1,0 +1,37 @@
+
+
+
+ion-card{
+  display: inline-block;
+  flex-direction: column;
+  margin: 0 !important;
+  background: blue;
+  width: 500px;
+  height: 150%;
+}
+ion-content{
+background: green;
+}
+ion-content ion-card{
+background: #E3E3E3!important;
+width: 100%;
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 15px;
+  color: black;
+  text-align: -webkit-center;
+}
+
+.no-scroll {
+  --overflow: hidden;
+}
+ion-title {
+  color: #FF5001;   
+ }
+
+ [class="phantom-text"]{
+  color: transparent;
+  text-align: center;
+}
