@@ -1,0 +1,49 @@
+ion-title {
+    color: #FF5001;   
+   }
+
+   [text-color="battery-color"] {
+    color: black;
+    text-align: center;
+    padding-top: 6%;
+    font-size: 17px;
+}
+
+[text-color="card-battery-color"] {
+    background-color: #E3E3E3;
+    text-align: center;
+    width: 70%;
+    height: 55%;
+}
+
+
+[text-color="card-battery-color1"] {
+    background-color: #E3E3E3;
+    text-align: center;
+    width: 70%;
+    margin-block: auto;
+    margin-top: -4%;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+}
+
+h2 {
+    font-size: 15px;
+    text-align: -webkit-center;
+}
+
+[text-color="card-twislock-actions"] {
+    background-color: #FF5001;
+    text-align: center;
+    width: 110%;
+    left: -15%;
+    height: 60%;
+}
+

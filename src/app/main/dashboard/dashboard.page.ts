@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import {
   IonHeader,
   IonToolbar,
@@ -22,7 +23,7 @@ import {
   imports: [
     CommonModule,
 
-    // 👇 Todo lo que aparece en el HTML
+    RouterLink,
     IonHeader,
     IonToolbar,
     IonTitle,

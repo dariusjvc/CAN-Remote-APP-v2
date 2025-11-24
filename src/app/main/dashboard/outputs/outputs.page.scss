@@ -1,0 +1,177 @@
+ion-title {
+    color: #FF5001;   
+   }
+
+   [text-color="battery-color"] {
+    color: #3dc2ff;
+    text-align: center;
+    padding-top: 0%;
+    font-size: 15px;
+}
+
+[text-color="battery-color-driving"] {
+    color: #3dc2ff;
+    text-align: center;
+    padding-top: 2%;
+    font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+}
+h2 {
+    font-size: 15px;
+    text-align: -webkit-center;
+}
+
+[text-color="card-twislock-actions"] {
+    background-color: #FF5001;
+    text-align: center;
+    width: 101%;
+    left: -15%;
+    height: 60%;
+}
+
+[text-color="card-battery-color"] {
+    background-color: #E3E3E3;
+    text-align: center;
+    width: 110%;
+    left: -15%;
+    height: 60%;
+}
+
+
+
+
+[text-color="card-battery-color1"] {
+    background-color: #E3E3E3;
+    text-align: center;
+    width: 110%;
+    left: -15%;
+    height: 225%;
+    margin-top: -28%;
+    text-align: -webkit-match-parent;
+    text-align-last: center;
+}
+
+[text-color="card-battery-color2"] {
+    background-color: #E3E3E3;
+    text-align: center;
+    width: 110%;
+    left: -15%;
+    height: 125%;
+    margin-top: -28%;
+}
+[text-color="card-battery-color3"] {
+    background-color: #E3E3E3;
+    text-align: center;
+    width: 110%;
+    left: -15%;
+    height: 125%;
+    margin-top: -28%;
+}
+
+[text-color="card-battery-color4"] {
+    background-color: #E3E3E3;
+    text-align: center;
+    width: 110%;
+    left: -43%;
+    height: 125%;
+    margin-top: -28%;
+    width: 128%;
+}
+
+
+[text-color="test"] {
+    height: 125%;
+    margin-top: -7%;
+}
+
+[text-color="test1"] {
+    height: 125%;
+    margin-top: -7%;
+}
+
+[text-color="test2"] {
+    height: 125%;
+    margin-top: -7%;
+}
+
+[text-color="night-mode-on-enabled"] {
+    background-color: green;
+    text-align: center;
+    width: 110%;
+    left: -15%;
+    height: 60%;
+}
+[text-color="night-mode-on-disabled"] {
+    background-color: #E3E3E3;
+    text-align: center;
+    width: 110%;
+    left: -15%;
+    height: 60%;
+}
+
+[text-color="night-mode-off-enabled"] {
+    background-color: red;
+    text-align: center;
+    width: 110%;
+    left: -15%;
+    height: 60%;
+}
+[text-color="night-mode-off-disabled"] {
+    background-color: #E3E3E3;
+    text-align: center;
+    width: 110%;
+    left: -15%;
+    height: 60%;
+}
+
+ion-toggle {
+    zoom:1.5;
+    /*width: 80px;    
+    height: 30px;
+    --handle-max-height: 80px;
+    --handle-spacing: 6px;
+    --handle-height: 200px;
+    --handle-border-radius: 10px 10px 10px 10px;
+    --track-width: 80px;
+    --track-max-width: 80px;*/
+}
+
+ion-toggle::before {
+    position: absolute;
+  
+    top: 12px;
+    left: 4px;
+  
+    content: "ON";
+  
+    color: white;
+    font-size: 10px;
+  
+    z-index: 1;
+}
+
+ion-toggle::after {
+    position: absolute;
+  
+    top: 12px;
+    left: 32px;
+  
+    content: "OFF";
+  
+    color: white;
+    font-size: 10px;
+  
+    z-index: 1;
+  }
+
+  [class="phantom-text"]{
+    color: transparent;
+    text-align: center;
+}

@@ -31,4 +31,20 @@ export const routes: Routes = [
     path: 'token',
     loadComponent: () => import('./token/token.page').then( m => m.TokenPage)
   },
+  {
+    path: 'plc-info',
+    loadComponent: () => import('./main/dashboard/plc-info/plc-info.page').then( m => m.PlcInfoPage)
+  },
+  {
+    path: 'extra-info',
+    loadComponent: () => import('./main/dashboard/extra-info/extra-info.page').then( m => m.ExtraInfoPage)
+  },
+  {
+    path: 'outputs',
+    loadComponent: () => import('./main/dashboard/outputs/outputs.page').then( m => m.OutputsPage)
+  },
+  {
+    path: 'inputs',
+    loadComponent: () => import('./main/dashboard/inputs/inputs.page').then( m => m.InputsPage)
+  },
 ];
