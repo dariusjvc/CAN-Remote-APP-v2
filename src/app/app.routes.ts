@@ -16,10 +16,6 @@ export const routes: Routes = [
     loadComponent: () => import('./main/dashboard/dashboard.page').then( m => m.DashboardPage)
   },
   {
-    path: 'device',
-    loadComponent: () => import('./main/device/device.page').then( m => m.DevicePage)
-  },
-  {
     path: 'fingerprint',
     loadComponent: () => import('./fingerprint/fingerprint.page').then( m => m.FingerprintPage)
   },
@@ -46,5 +42,9 @@ export const routes: Routes = [
   {
     path: 'inputs',
     loadComponent: () => import('./main/dashboard/inputs/inputs.page').then( m => m.InputsPage)
+  },  {
+    path: 'change-device',
+    loadComponent: () => import('./main/change-device/change-device.page').then( m => m.ChangeDevicePage)
   },
+
 ];
