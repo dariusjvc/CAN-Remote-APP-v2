@@ -1,18 +1,25 @@
-.button-inner {
-    display: flex;
-    position: relative;
-    flex-flow: row nowrap;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    color: white;
+/* Fondo oscuro para esta página */
+ion-content {
+  --background: #000000;
 }
-ion-tabs{
 
-    --ion-background-color:white;
- }
+/* Barra de tabs abajo, estilo oscuro */
+ion-tab-bar {
+  --background: #ffffff;      
+  --border-color: transparent;
 
+  --color: #FF5001;           /* texto/icono cuando NO está seleccionado */
+  --color-selected: #3b82f6;  /* azul para el seleccionado (Dashboard en tu captura) */
 
+  font-size: 12px;
+}
+
+/* Tamaño de los iconos de los tabs */
+ion-tab-button ion-icon {
+  font-size: 1.6rem;
+}
+
+/* Por si algún estilo de por ahí pone subrayado a los textos */
+ion-tab-bar a {
+  text-decoration: none;
+}

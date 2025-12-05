@@ -41,12 +41,12 @@ export class FingerprintPage implements OnInit {
       const res = await this.alerts.fingerPrintAIO();
       console.log('[Fingerprint] fingerPrintAIO result:', res);
 
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/main']);
 
     } catch (err) {
       console.error('[Fingerprint] error in unLock:', err);
 
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/main']);
     }
   }
 
