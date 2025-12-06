@@ -1,13 +1,133 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>plc-info</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-header>
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">plc-info</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>General Information</ion-title>
     </ion-toolbar>
   </ion-header>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-title text-color="battery-color">Batteries</ion-title>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card text-color="card-battery-color">
+          <h2 text-center margin-top>{{batteryPercent}}</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <h2 style="text-align:left;" margin-top>%</h2>
+      </ion-col>
+      <ion-col>
+        <ion-card text-color="card-battery-color">
+          <h2 text-center margin-top>{{batteryVoltaje}}</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <h2 style="text-align:left;" margin-top>V</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <!--<h2 text-center margin-top>PLC Temp</h2>-->
+        <ion-title text-color="battery-color">PLC Temp</ion-title>
+      </ion-col>
+      <ion-col>
+        <ion-card text-color="card-battery-color">
+          <h2 text-center margin-top>{{plcTemp}}</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <h2 style="text-align:left;" margin-top>ºC</h2>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-title text-color="battery-color">Total working time</ion-title>
+
+    <ion-row>
+      <ion-col>
+        <h2 text-center margin-top>Hours</h2>
+      </ion-col>
+      <ion-col>
+        <h2 text-center margin-top>Min</h2>
+      </ion-col>
+      <ion-col>
+        <h2 text-center margin-top>Seg</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card text-color="card-battery-color1">
+          <h2 text-center margin-top>{{hoursWork}}</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card text-color="card-battery-color1">
+          <h2 text-center margin-top>{{minWork}}</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card text-color="card-battery-color1">
+          <h2 text-center margin-top>{{segWork}}</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+
+
+    <ion-row>
+      <ion-title text-color="battery-color">Working status</ion-title>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col>
+        <h2 text-center margin-top>Total cycles</h2>
+      </ion-col>
+      <ion-col>
+        <ion-card text-color="card-battery-color">
+          <h2 text-center margin-top>{{cyclesTotal}}</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col>
+        <h2 text-center margin-top>Partial cycles</h2>
+      </ion-col>
+      <ion-col>
+        <ion-card text-color="card-battery-color">
+          <h2 text-center margin-top>{{cyclesPartial}}</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col>
+        <h2 text-center margin-top>Bypass counter</h2>
+      </ion-col>
+      <ion-col>
+        <ion-card text-color="card-battery-color">
+          <h2 text-center margin-top>{{bypassNum}}</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
