@@ -1,13 +1,78 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>extra-info</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-header>
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">extra-info</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Emergency Shutdown</ion-title>
     </ion-toolbar>
   </ion-header>
+</ion-header>
+
+<ion-content>
+
+
+  <!--<ion-card text-color="card-battery-color1">
+    <h2 *ngIf="stopEmergencyFlag" text-center margin-top>Stop Emergency<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!stopEmergencyFlag" text-center margin-top>Stop Emergency<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>-->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="phantom-text">
+          phantomText
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+      </ion-col>
+
+      <ion-col *ngIf="!plcApagadoFlag" style="background:#FF0000"><img src="../../assets/img/shutdown.png"></ion-col>
+      <ion-col *ngIf="plcApagadoFlag" style="background:#00FF00"><img src="../../assets/img/shutdown.png"></ion-col>
+
+      <ion-col>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="phantom-text">
+          phantomText
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+      </ion-col>
+      
+      <ion-col>
+        <ion-card text-color="card-twislock-actions" type="button" (click)="showConfirmShutDown()">
+          <h2 text-center margin-top>OHF ShutDown</h2>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col></ion-col>
+
+      <ion-col>
+        <ion-card text-color="card-twislock-actions" type="button" (click)="showConfirmReset()">
+          <h2 text-center margin-top>PLC Restart</h2>
+        </ion-card>
+      </ion-col>
+
+      <ion-col></ion-col>
+    </ion-row>
+
+</ion-grid>
+
+
+
 </ion-content>
