@@ -1,13 +1,254 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>inputs</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-header>
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">inputs</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>PLC Inputs</ion-title>
     </ion-toolbar>
   </ion-header>
+</ion-header>
+
+<ion-content>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+    <h2 text-center margin-top>Power</h2>
+    </ion-col>
+    <ion-col>
+    <h2 text-center margin-top>Unlocked</h2>
+    </ion-col>
+    <ion-col>
+    <h2 text-center margin-top>Locked</h2>
+    </ion-col>
+    <ion-col>
+    <h2 text-center margin-top>Land. Pin</h2>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+<ion-grid>  
+  <ion-row>
+    <ion-col>
+  <ion-card text-color="card-battery-color1">
+    <h2 text-center margin-top>TWL1</h2>
+  </ion-card>
+    </ion-col>
+    <ion-col>
+  <ion-card text-color="card-battery-color1">
+    <h2 *ngIf="s2Flag" text-center margin-top>S2&nbsp;&nbsp;<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s2Flag" text-center margin-top>S2&nbsp;&nbsp;<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>
+    </ion-col>
+    <ion-col>
+  <ion-card text-color="card-battery-color1">
+    <h2 *ngIf="s3Flag" text-center margin-top>S3&nbsp;&nbsp;<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s3Flag" text-center margin-top>S3&nbsp;&nbsp;<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>
+    </ion-col>   
+    <ion-col>
+  <ion-card text-color="card-battery-color1">
+    <h2 *ngIf="s4Flag" text-center margin-top>S4&nbsp;&nbsp;<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s4Flag" text-center margin-top>S4&nbsp;&nbsp;<ion-icon name="radio-button-off"></ion-icon></h2> 
+    </ion-card>
+    </ion-col>  
+  </ion-row>
+  <ion-row>
+    <ion-col>
+  <ion-card text-color="card-battery-color2">
+    <h2 text-center margin-top>TWL2</h2>
+  </ion-card>
+    </ion-col>
+    <ion-col>
+  <ion-card text-color="card-battery-color2">
+    <h2 *ngIf="s5Flag" text-center margin-top>S5&nbsp;&nbsp;<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s5Flag" text-center margin-top>S5&nbsp;&nbsp;<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>
+    </ion-col>
+    <ion-col>
+  <ion-card text-color="card-battery-color2">
+    <h2 *ngIf="s6Flag" text-center margin-top>S6&nbsp;&nbsp;<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s6Flag" text-center margin-top>S6&nbsp;&nbsp;<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>
+    </ion-col>   
+    <ion-col>
+  <ion-card text-color="card-battery-color2">
+    <h2 *ngIf="s7Flag" text-center margin-top>S7&nbsp;&nbsp;<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s7Flag" text-center margin-top>S7&nbsp;&nbsp;<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>
+    </ion-col>  
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+  <ion-card text-color="card-battery-color3">
+    <h2 text-center margin-top>TWL3</h2>
+  </ion-card>
+    </ion-col>
+    <ion-col>
+  <ion-card text-color="card-battery-color3">
+    <h2 *ngIf="s10Flag" text-center margin-top>S10<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s10Flag" text-center margin-top>S10<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>
+    </ion-col>
+    <ion-col>
+  <ion-card text-color="card-battery-color3">
+    <h2 *ngIf="s11Flag" text-center margin-top>S11<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s11Flag" text-center margin-top>S11<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>
+    </ion-col>   
+    <ion-col>
+  <ion-card text-color="card-battery-color3">
+    <h2 *ngIf="s12Flag" text-center margin-top>S12<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s12Flag" text-center margin-top>S12<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>
+    </ion-col>  
+  </ion-row>
+  <ion-row>
+    <ion-col>
+  <ion-card text-color="card-battery-color4">
+    <h2 text-center margin-top>TWL4</h2>
+  </ion-card>
+    </ion-col>
+    <ion-col>
+  <ion-card text-color="card-battery-color4">
+    <h2 *ngIf="s13Flag" text-center margin-top>S13<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s13Flag" text-center margin-top>S13<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>
+    </ion-col>
+    <ion-col>
+  <ion-card text-color="card-battery-color4">
+    <h2 *ngIf="s14Flag" text-center margin-top>S14<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s14Flag" text-center margin-top>S14<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>
+    </ion-col>   
+    <ion-col>
+  <ion-card text-color="card-battery-color4">
+    <h2 *ngIf="s15Flag" text-center margin-top>S15<ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!s15Flag" text-center margin-top>S15<ion-icon name="radio-button-off"></ion-icon></h2>
+  </ion-card>
+    </ion-col>  
+  </ion-row>
+
+      <label><span><br/></span></label>
+  <ion-row>
+
+    <ion-col text-color="test">
+    </ion-col>
+ 
+
+
+
+    <ion-col text-color="test">
+    <h2 *ngIf="openFlag" text-center margin-top><ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!openFlag" text-center margin-top><ion-icon name="radio-button-off"></ion-icon></h2>
+    </ion-col>
+
+
+  
+    <ion-col text-color="test">
+    <h2 *ngIf="closeFlag" text-center margin-top><ion-icon name="radio-button-on"></ion-icon></h2>
+    <h2 *ngIf="!closeFlag" text-center margin-top><ion-icon name="radio-button-off"></ion-icon></h2>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <h2 text-color="twislock-actions-h2">Twislock actions</h2>
+    </ion-col>
+    <ion-col>
+      <ion-card text-color="card-twislock-actions" type="button" (click)="showConfirmOpen()">
+        <h2 text-center margin-top>Unlock</h2>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card text-color="card-twislock-actions" type="button" (click)="showConfirmClose()">
+        <h2 text-center margin-top>Lock</h2>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <div class="phantom-text">
+        phantomText
+      </div>
+    </ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col>
+    </ion-col>
+
+    <ion-col>
+      <div class="text-title-button">
+        Overload
+      </div>
+    </ion-col>
+
+    <ion-col>
+    </ion-col>   
+  </ion-row>
+
+  <ion-row>
+    <ion-col></ion-col>
+    
+    <ion-col>
+      <ion-card *ngIf="m1Flag" text-color="m1-enabled">
+        <h2 text-center margin-top>M1</h2>
+      </ion-card>
+      <ion-card *ngIf="!m1Flag" text-color="m1-disabled">
+        <h2 text-center margin-top>M1</h2>
+      </ion-card>
+    </ion-col>
+    
+    <ion-col>
+      <ion-card *ngIf="m2Flag" text-color="m2-enabled">
+        <h2 text-center margin-top>M2</h2>
+      </ion-card>
+      <ion-card *ngIf="!m2Flag" text-color="m2-disabled">
+        <h2 text-center margin-top>M2</h2>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <div class="phantom-text">
+        phantomText
+      </div>
+    </ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col>
+      <div class="text-title-button">Driving Sensor</div>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col>
+      <ion-card *ngIf="s9Flag" text-color="card-driving-sensor-on">
+        <h2 text-center margin-top>S9</h2>
+      </ion-card>
+      <ion-card *ngIf="!s9Flag" text-color="card-driving-sensor-off">
+        <h2 text-center margin-top>S9</h2>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+  </ion-row>  
+</ion-grid>
+
+
+
 </ion-content>
